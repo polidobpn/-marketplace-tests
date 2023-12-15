@@ -28,7 +28,7 @@ export default function () {
     },
   };
   
-  let getSubscription = http.get( baseUrl + `/cloudloyalty/v2/showcases/4?identifier=familhao&cachedPrice=false=${participantid}&${catalogId}&${customerId}&${campaignid}` , params,)
+  let getSubscription = http.get( baseUrl + `/cloudloyalty/v2/showcases/5?identifier=familhao&cachedPrice=false=${participantid}&${catalogId}&${customerId}&${campaignid}` , params,)
   check(getSubscription, {'Get Subscriptions is status 200': (r) => r.status === 200,})
 
 }
