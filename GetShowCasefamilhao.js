@@ -3,13 +3,13 @@ import http from 'k6/http';
 import { check } from 'k6';
 
 export const options = {
-   vus: 1,
+   //vus: 1,
    //duration: '10S',
-  /*stages: [
-    { duration: '30s', target: 1000 },
-    { duration: '150s', target: 1000 },
+  stages: [
+    { duration: '30s', target: 100},
+    { duration: '150s', target: 200},
     { duration: '1s', target: 0 },
-  ],*/
+  ],
 };
 
 export default function () {
@@ -21,7 +21,7 @@ export default function () {
   let participantid = '56250042'
   let campaignid = '71447'
   let username = '40790325870'
-  let Authorization = 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkFCMUE3MDNCRkRDMDNDNzI5NDAzREZCMzIyMjQxQTIwOTlFN0ZEMTNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InF4cHdPXzNBUEhLVUE5LXpJaVFhSUpubl9STSJ9.eyJuYmYiOjE3MDI1ODQwMTcsImV4cCI6MTcwMjY3MDQxNywiaXNzIjoiaHR0cHM6Ly9mYW1pbGhhby1zc28tcHJvZC0wMDEuYXp1cmV3ZWJzaXRlcy5uZXQiLCJjbGllbnRfaWQiOiJwcmQuNzE0NDciLCJqdGkiOiI0RDhFMDBCMEM1Q0QxRDAyRDAzMTNFMzYzMENDMjVEMiIsImlhdCI6MTcwMjU4NDAxNywic2NvcGUiOiJ3ZWJwcmVtaW9zLmJhY2tvZmZpY2UvYWxsLnJlYWQgd2VicHJlbWlvcy5iYWNrb2ZmaWNlL2FsbC53cml0ZSB3ZWJwcmVtaW9zLmNhbXBhaWducy83MTQ0NyJ9.ptJQq09zBLZkFMEPtCwOM4AFHd-Xwhmyu8KiIXv0bfD4MWMxlM6yG7JMJjKFJQaQM9v5VVxtZnl-LsbI6lGwERWQQFGQK8TVBuaMC298TpV0CTZN_HAGQRTVvksS_qaK9oSGFZEBdoNYxABbR2Ys0zU_oBlcHmDB-8WhgvRcN7ysoE-jpXIoYqSGOCOp6n3aVJyNzkuqyFOZR1edr_auRit_2fGWHIMyd2aSaJKXMWWSeCND9gthEfBNrJpJ11TTI3TuogJMsJ7ouHUb9lA7O_xk3ywVUaVj1f_u3l7Eki_uV30zkFxqTp6hCCUk_dyyvZ3extQuBr07OeprRUtsgg'
+  let Authorization = 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkFCMUE3MDNCRkRDMDNDNzI5NDAzREZCMzIyMjQxQTIwOTlFN0ZEMTNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InF4cHdPXzNBUEhLVUE5LXpJaVFhSUpubl9STSJ9.eyJuYmYiOjE3MDI2NzI4ODcsImV4cCI6MTcwMjc1OTI4NywiaXNzIjoiaHR0cHM6Ly9mYW1pbGhhby1zc28tcHJvZC0wMDEuYXp1cmV3ZWJzaXRlcy5uZXQiLCJjbGllbnRfaWQiOiJwcmQuNzE0NDciLCJqdGkiOiJFOUYwQzY2RkJFMTg3NDFCNzlFRDBBRjE2QzJGNjYyRCIsImlhdCI6MTcwMjY3Mjg4Nywic2NvcGUiOiJ3ZWJwcmVtaW9zLmJhY2tvZmZpY2UvYWxsLnJlYWQgd2VicHJlbWlvcy5iYWNrb2ZmaWNlL2FsbC53cml0ZSB3ZWJwcmVtaW9zLmNhbXBhaWducy83MTQ0NyJ9.CtpDy8UMqz_4pLvhvZEOFn-ibI8FyKhWz3DPmQdRCuwp12HrqfNHz4cToVh1mWetuFUyy_ZMZdQUzui91G7uyM6P0uB4AP6Rys5U0xJMI-IRmqZXiRZ1AIWU3rkt75EXlGXMIc2H1PDIxiBPpW7Cbn7x0h1I1gHFrrICk8KwITS7RD_N5zLCfJGpmN54PdVT6Ejlxy9WihdFXo2mqUZGQyBzxnAfirtSDDwZ0D490rP3qIqQTfoeRmXVaZu-UhweRxwN-6PhsMJoF0wtj81JuBnuuleDJq6eDIbCs_xQ-zxrt_QbqMa04R6IZ91VlMDaNL1QSYsKkOlr_t1f6qEqPA'
   
   const params = {
     headers: {
